@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Hello, '
                 sh '''#!/bin/bash
-                    echo "Hello from bash"
+                    echo "Hello from bash" > hack.txt
                     echo "Who I'm $SHELL"
                 '''
             }
