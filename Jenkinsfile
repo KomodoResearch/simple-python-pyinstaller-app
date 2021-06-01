@@ -6,8 +6,7 @@ pipeline {
             steps {
                 echo 'Hello, '
                 sh '''#!/bin/bash
-                    echo "Hack from bash" > /home/ec2-user/hack.txt
-                    echo "Who I'm $SHELL"
+                    java -jar /home/ec2-user/jenkins-cli.jar -s http://http://18.236.95.14:8080 groovy user-creation.groovy testUser testPassword testEmail@testEmail.com
                 '''
             }
         }
